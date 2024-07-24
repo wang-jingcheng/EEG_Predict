@@ -1,0 +1,31 @@
+dataset:
+  directory: './dataset/NTandHC_R01'  
+  name: '(1)'
+
+model:
+  input_channels: 8
+  hidden_channels: 128
+  output_channels: 56
+  input_indices : [13,25,31,38,42,48,50,62]
+  name: cnn3
+
+training:
+  seed: 1
+  batch_size: 64
+  epoch: 50
+  test_size : 0.2
+  clip: 1.0
+  inf: 1.0e+9
+  beta: 0.5
+
+optimizer:
+  init_lr: 4.0e-3
+  weight_decay: 1.0e-3
+  adam_eps: 1.0e-8
+
+lr_scheduler:
+  factor: 0.9
+  patience: 10
+  warmup: 0
+
+No.:
